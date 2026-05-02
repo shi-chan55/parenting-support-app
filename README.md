@@ -242,3 +242,38 @@ MVPで作る機能
 * 習慣化強化（リマインド）
 
 ⸻
+
+10. 技術スタック
+
+使用予定
+
+* バックエンド：Ruby on Rails7.1.3 / Ruby3.2.2
+* ユーザー認証 :Device
+* 画像管理 :Active Storage
+* 画像保存先(開発) :ローカルストレージ
+* 画像保存先(本番) :Amazon S3
+* DB：PostgreSQL
+* フロントエンド :Hotwire (Turbo, Stimulus) + ERB + Tailwind CSS
+* デプロイ：Render
+
+開発環境
+* Docker
+
+⸻
+
+技術選定理由
+
+* 学習コストを抑える
+* CRUDを確実に実装できる
+* 卒業を優先
+
+⸻
+
+不安点
+
+* 実装時間不足
+* UI設計
+
+🔸対策：機能を削る
+
+⸻
