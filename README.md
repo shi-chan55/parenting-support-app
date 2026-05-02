@@ -254,12 +254,12 @@ MVPで作る機能
 使用予定
 
 * バックエンド：Ruby on Rails7.1.3 / Ruby3.2.2
+* フロントエンド :Hotwire (Turbo, Stimulus) + ERB + Tailwind CSS
 * ユーザー認証 :Device
 * 画像管理 :Active Storage
 * 画像保存先(開発) :ローカルストレージ
 * 画像保存先(本番) :Amazon S3
 * DB：PostgreSQL
-* フロントエンド :Hotwire (Turbo, Stimulus) + ERB + Tailwind CSS
 * デプロイ：Render
 
 ### 開発環境
