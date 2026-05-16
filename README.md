@@ -292,3 +292,11 @@
 - UI設計
 
 → 対策：機能を削る
+
+---
+
+## 画面遷移図　　　
+https://www.figma.com/design/ocTJdLmVvjxpKeOLyfwJ7d/%E7%84%A1%E9%A1%8C?node-id=0-1&t=7gR1WVdWFhubCbTy-1
+
+
+
