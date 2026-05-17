@@ -301,5 +301,4 @@ https://www.figma.com/design/ocTJdLmVvjxpKeOLyfwJ7d/%E7%84%A1%E9%A1%8C?node-id=0
 ---
 
 ## ER図
-[![Image from Gyazo](https://i.gyazo.com/44b5197a141029ab06e630a958bbbde6.png)](https://gyazo.com/44b5197a141029ab06e630a958bbbde6)
-
+[![Image from Gyazo](https://i.gyazo.com/c473966a6d910542b7cf40149436476c.png)](https://gyazo.com/c473966a6d910542b7cf40149436476c)
