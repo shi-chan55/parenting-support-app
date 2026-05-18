@@ -298,5 +298,7 @@
 ## 画面遷移図　　　
 https://www.figma.com/design/ocTJdLmVvjxpKeOLyfwJ7d/%E7%84%A1%E9%A1%8C?node-id=0-1&t=7gR1WVdWFhubCbTy-1
 
+---
 
-
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/c473966a6d910542b7cf40149436476c.png)](https://gyazo.com/c473966a6d910542b7cf40149436476c)
