@@ -6,8 +6,6 @@ services:
     volumes:
       - .:/parenting-support-app
       - bundle_cache:/usr/local/bundle
-    environment:
-      DATABASE_URL: postgresql://postgres:password@db:5432/parenting_support_app_development
     depends_on:
       db:
         condition: service_healthy
