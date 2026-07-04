@@ -82,5 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: parenting_support_app_production
-  
+  url: <%= ENV["DATABASE_URL"] %>
