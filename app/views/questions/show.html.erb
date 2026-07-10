@@ -1,0 +1,12 @@
+<div class="max-w-md mx-auto mt-8 text-center">
+  <% if @question %>
+    <% if @question.images.attached? %>
+      <%= image_tag @question.images.sample, class: "w-full rounded-lg mb-4" %>
+    <% end %>
+
+    <h1 class="text-2xl font-bold mb-2"><%= @question.title %></h1>
+    <p class="text-lg"><%= @question.body %></p>
+  <% else %>
+    <p>この難易度の問題がまだ登録されていません。</p>
+  <% end %>
+</div>
