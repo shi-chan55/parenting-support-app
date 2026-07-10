@@ -1,0 +1,9 @@
+<div id="complete_button">
+  <% if error %>
+    <p class="text-red-600 font-bold mb-2"><%= error %></p>
+  <% end %>
+  <%= button_to "できた！", complete_question_path(difficulty: difficulty, question_id: question.id),
+        method: :post,
+        data: { turbo_submits_with: "送信中..." },
+        class: "w-full py-3 rounded-lg bg-pink-400 text-white font-bold" %>
+</div>

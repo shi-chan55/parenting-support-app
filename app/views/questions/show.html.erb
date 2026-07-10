@@ -26,6 +26,9 @@
         </p>
       </div>
     </div>
+    <div class="mt-6">
+      <%= render "complete_button", question: @question, difficulty: @difficulty, error: nil %>
+    </div>
   <% else %>
     <p>この難易度の問題がまだ登録されていません。</p>
   <% end %>
