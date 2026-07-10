@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   root "home#index"
   get "dashboard", to: "dashboard#index"
   get "difficulties", to: "difficulties#index"
+  get "questions/:difficulty", to: "questions#show", as: :question
 end
