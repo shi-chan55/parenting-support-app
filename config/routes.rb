@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   get "dashboard", to: "dashboard#index"
   get "difficulties", to: "difficulties#index"
   get "questions/:difficulty", to: "questions#show", as: :question
+  get "completions/:id", to: "completions#show", as: :completion
   post "questions/:difficulty/complete", to: "questions#complete", as: :complete_question
 end
