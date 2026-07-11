@@ -11,9 +11,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root "home#index"
+
   get "dashboard", to: "dashboard#index"
   get "difficulties", to: "difficulties#index"
   get "records", to: "records#index"
+  get "mypage", to: "mypage#show"
+
   get "questions/:difficulty", to: "questions#show", as: :question
   get "completions/:id", to: "completions#show", as: :completion
   post "questions/:difficulty/complete", to: "questions#complete", as: :complete_question
