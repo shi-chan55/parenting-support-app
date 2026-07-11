@@ -14,10 +14,7 @@ class QuestionsController < ApplicationController
     )
 
     if @answer_completion.save
-      render turbo_stream: turbo_stream.replace(
-        "complete_button",
-        partial: "questions/completed_message"
-      )
+      redirect_to completion_path(@answer_completion)
     else
       render turbo_stream: turbo_stream.replace(
         "complete_button",
