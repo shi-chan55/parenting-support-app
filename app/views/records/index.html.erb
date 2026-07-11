@@ -1,0 +1,19 @@
+<div class="max-w-md mx-auto mt-8">
+  <h1 class="text-2xl font-bold text-center mb-6">記録一覧</h1>
+
+  <% if @records.present? %>
+    <div class="flex flex-col gap-3">
+      <% @records.each do |record| %>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <p class="font-bold"><%= record[:question].title %></p>
+          <p class="text-sm text-gray-600">達成回数：<%= record[:count] %>回</p>
+          <p class="text-sm text-gray-600">最終達成日：<%= record[:last_completed_on] %></p>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="text-center text-gray-500">まだ記録がありません。まずは今日の1問に挑戦してみましょう！</p>
+  <% end %>
+
+  <%= link_to "難易度選択に戻る", difficulties_path, class: "block w-full text-center mt-6 py-3 rounded-lg bg-blue-400 text-white font-bold" %>
+</div>
