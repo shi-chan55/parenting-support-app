@@ -1,5 +1,17 @@
 <header class="bg-white shadow p-4 flex justify-between items-center">
-  <%= link_to "ことのは", root_path, class: "font-bold text-lg" %>
+  <div class="flex items-center gap-4">
+    <% unless current_page?(difficulties_path) || current_page?(mypage_path) %>
+      <%= link_to "← 戻る", "#",
+            data: {
+              controller: "back",
+              action: "click->back#goBack",
+              back_fallback_value: difficulties_path
+            },
+            class: "text-sm text-gray-500" %>
+    <% end %>
+    <%= link_to "ことのは", root_path, class: "font-bold text-lg" %>
+  </div>
+
   <% if user_signed_in? %>
     <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-sm text-gray-500" %>
   <% end %>
