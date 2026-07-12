@@ -1,22 +1,19 @@
-<div class="w-full min-h-screen bg-amber-50 flex flex-col items-center justify-center px-4">
+<div class="w-full min-h-screen bg-amber-50 flex flex-col items-center justify-center pb-32 px-4">
 
   <div class="text-center mb-10">
     <h1 class="text-2xl font-bold text-amber-800 mb-2">
       こんにちは、<%= current_user.email %>さん！
     </h1>
-    <p class="text-amber-700">今日はどれにしますか？</p>
+    <p class="text-amber-700">今日も一緒にやってみよう</p>
   </div>
 
   <div class="flex flex-col gap-4 w-full max-w-xs">
-    <button class="bg-amber-300 text-white font-bold py-3 px-6 rounded-full shadow">
-      かんたん
-    </button>
-    <button class="bg-amber-400 text-white font-bold py-3 px-6 rounded-full shadow">
-      ふつう
-    </button>
-    <button class="bg-amber-500 text-white font-bold py-3 px-6 rounded-full shadow">
-      むずかしい
-    </button>
+    <%= link_to "今日の難易度を選ぶ →", difficulties_path,
+          class: "bg-amber-400 text-white font-bold py-3 px-6 rounded-full shadow text-center" %>
+    <%= link_to "記録一覧を見る", records_path,
+          class: "bg-white text-amber-700 border border-amber-300 font-bold py-3 px-6 rounded-full shadow text-center" %>
+    <%= link_to "マイページへ", mypage_path,
+          class: "bg-white text-amber-700 border border-amber-300 font-bold py-3 px-6 rounded-full shadow text-center" %>
   </div>
 
 </div>
