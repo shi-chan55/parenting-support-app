@@ -13,10 +13,11 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="min-h-screen flex flex-col">
     <%= render "layouts/header" %>
-    <main class="container mx-auto mt-10 px-5 flex">
+    <main class="container mx-auto mt-10 px-5 flex flex-1">
       <%= yield %>
     </main>
+    <%= render "layouts/footer" %>
   </body>
 </html>
