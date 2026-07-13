@@ -1,12 +1,14 @@
-<div class="max-w-md mx-auto mt-8 text-center">
-  <p class="text-3xl mb-4">🎉</p>
-  <h1 class="text-2xl font-bold mb-2">今日の分、完了しました！</h1>
-  <p class="text-lg mb-6"><%= @question.title %></p>
+<div class="w-full min-h-screen bg-amber-50 flex flex-col items-center justify-center px-4 pb-52 text-center">
+  <div class="w-full max-w-md">
+    <p class="text-3xl mb-4">🎉</p>
+    <h1 class="text-2xl font-bold mb-2">今日の分、完了しました！</h1>
+    <p class="text-lg mb-6"><%= @question.title %></p>
 
-  <div class="bg-amber-50 rounded-lg p-4 mb-6 text-left">
-    <p class="mb-2">この問題の達成回数：<span class="font-bold"><%= @completion_count %>回</span></p>
-    <p>最終達成日：<span class="font-bold"><%= @last_completed_on %></span></p>
+    <div class="bg-white shadow rounded-lg p-4 mb-6 text-left">
+      <p class="mb-2">この問題の達成回数：<span class="font-bold"><%= @completion_count %>回</span></p>
+      <p>最終達成日：<span class="font-bold"><%= @last_completed_on %></span></p>
+    </div>
+
+    <%= link_to "難易度選択に戻る", difficulties_path, class: "block w-full py-3 rounded-full bg-amber-400 hover:bg-amber-500 text-white font-bold" %>
   </div>
-
-  <%= link_to "難易度選択に戻る", difficulties_path, class: "block w-full py-3 rounded-full bg-amber-400 text-white font-bold" %>
 </div>

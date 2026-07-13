@@ -5,5 +5,5 @@
   <%= button_to "できた！", complete_question_path(difficulty: difficulty, question_id: question.id),
         method: :post,
         data: { turbo_submits_with: "送信中..." },
-        class: "w-full py-3 rounded-lg bg-pink-400 text-white font-bold" %>
+        class: "w-full py-3 rounded-full bg-teal-500 hover:bg-teal-600 text-white font-bold" %>
 </div>
