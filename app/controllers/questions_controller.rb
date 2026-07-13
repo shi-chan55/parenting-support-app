@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  layout "immersive", only: [:show]
+
   def show
     @difficulty = params[:difficulty]
     @question = Question.where(difficulty: @difficulty).order(Arel.sql("RANDOM()")).first
