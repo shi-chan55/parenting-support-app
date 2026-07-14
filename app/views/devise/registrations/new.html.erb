@@ -3,12 +3,17 @@
     <h2 class="text-2xl font-bold text-amber-800 mb-6 text-center">新規登録</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "devise/shared/error_messages", resource: resource %>
-
       <div class="mb-4">
         <%= f.label :email, "メールアドレス", class: "block text-sm text-amber-700 mb-1" %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email",
               class: "w-full border border-amber-300 rounded-lg px-3 py-2" %>
+        <% if resource.errors.where(:email, :taken).any? %>
+          <p class="text-red-600 text-sm mt-1">このメールアドレスはすでに登録されています</p>
+        <% elsif resource.errors.where(:email, :invalid).any? %>
+          <p class="text-red-600 text-sm mt-1">正しいメールアドレスの形式で入力してください</p>
+        <% elsif resource.errors.where(:email, :blank).any? %>
+          <p class="text-red-600 text-sm mt-1">メールアドレスを入力してください</p>
+        <% end %>
       </div>
 
       <div class="mb-4">
@@ -18,12 +23,20 @@
         <% end %>
         <%= f.password_field :password, autocomplete: "new-password",
               class: "w-full border border-amber-300 rounded-lg px-3 py-2" %>
+        <% if resource.errors.where(:password, :too_short).any? %>
+          <p class="text-red-600 text-sm mt-1">パスワードは6文字以上で入力してください</p>
+        <% elsif resource.errors.where(:password, :blank).any? %>
+          <p class="text-red-600 text-sm mt-1">パスワードを入力してください</p>
+        <% end %>
       </div>
 
       <div class="mb-6">
-        <%= f.label :password_confirmation, "パスワード（確認）", class: "block text-sm text-amber-700 mb-1" %>
+        <%= f.label :password_confirmation, "パスワード（確認用）", class: "block text-sm text-amber-700 mb-1" %>
         <%= f.password_field :password_confirmation, autocomplete: "new-password",
               class: "w-full border border-amber-300 rounded-lg px-3 py-2" %>
+        <% if resource.errors.where(:password_confirmation, :confirmation).any? %>
+          <p class="text-red-600 text-sm mt-1">パスワードと確認用パスワードが一致しません</p>
+        <% end %>
       </div>
 
       <%= f.submit "登録する",
