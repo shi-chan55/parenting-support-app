@@ -36,6 +36,12 @@ questions_seed_data.each do |data|
     q.parent_guide = data[:parent_guide]
   end
 
+  current_service = Rails.application.config.active_storage.service.to_s
+
+  if question.images.attached? && question.images.first.blob.service_name != current_service
+    question.images.purge
+  end
+
   next if question.images.attached?
 
   image_path = Rails.root.join("db", "seed_images", data[:image_filename])
